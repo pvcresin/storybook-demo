@@ -1,0 +1,198 @@
+scss_files: 'lib/scss/**/*.scss'
+
+exclude: ''
+
+# see https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md
+linters:
+  # !の前後スペース
+  BangFormat:
+    enabled: true
+    space_before_bang: true
+    space_after_bang: false
+  # BEM式のフォーマット
+  BemDepth:
+    enabled: false
+  # borderにはnoneでなく0を使う
+  BorderZero:
+    enabled: true
+  # 複数クラス指定不許可
+  ChainedClasses:
+    enabled: false
+  # カラーキーワードを使わずHexを使う
+  ColorKeyword:
+    enabled: true
+  # カラー指定では変数を用いる
+  ColorVariable:
+    enabled: true
+  # コメントでは//を利用 (カスタム 無効)
+  Comment:
+    enabled: false
+  # @debugステートメントチェック
+  DebugStatement:
+    enabled: true
+  # lint disabled時の理由説明
+  DeclarationOrder:
+    enabled: false
+  # 重複する属性指定不許可
+  DuplicateProperty:
+    enabled: true
+  # @else句のフォーマット
+  ElsePlacement:
+    enabled: true
+  # ルール間には一行あける
+  EmptyLineBetweenBlocks:
+    enabled: true
+  # 空ルールのセレクタは不許可
+  EmptyRule:
+    enabled: true
+  # @extendではディレクティブ化する
+  ExtendDirective:
+    enabled: false
+  # ファイル末尾の空行必須
+  FinalNewline:
+    enabled: true
+  # 色指定でのHex長さ (カスタム)
+  HexLength:
+    enabled: true
+    style: long
+  # 色指定でのHexを小文字に
+  HexNotation:
+    enabled: true
+    style: lowercase
+  # Hexの数が合わない場合にエラー
+  HexValidation:
+    enabled: true
+  # id指定不許可
+  IdSelector:
+    enabled: true
+  # important指定不許可
+  ImportantRule:
+    enabled: true
+  # @import でのパスフォーマット規定
+  ImportPath:
+    enabled: true
+  # インデント指定
+  Indentation:
+    enabled: true
+    character: space
+    width: 2
+  # 小数の0は不要
+  LeadingZero:
+    enabled: true
+  # マージ可能なセレクタチェック (カスタム force_nesting: false)
+  MergeableSelector:
+    enabled: true
+    force_nesting: false
+  # 変数命名規則 (カスタム)
+  NameFormat:
+    enabled: true
+    convention: ^[A-Za-z0-9_\-]*$
+  # ネスト規定 (カスタム3->5)
+  NestingDepth:
+    enabled: true
+    max_depth: 5
+  # @extendには実体を渡さない
+  PlaceholderInExtend:
+    enabled: true
+  # プロパティ数規定
+  PropertyCount:
+    enabled: false
+  # プロパティソート指定 (カスタム 無効)
+  PropertySortOrder:
+    enabled: false
+  # 属性キーへのスペルチェック
+  PropertySpelling:
+    enabled: true
+  # 指定可能な単位em,pxなどを規定
+  PropertyUnits:
+    enabled: true
+    properties:
+      border: ['px']
+      padding: ['px']
+      line-height: ['rem']
+      font-size: ['rem']
+  # PseudoElementには::を前につける
+  PseudoElement:
+    enabled: true
+  # タグ指定を不許可 (カスタム 無効)
+  QualifyingElement:
+    enabled: false
+  # セレクタ内の深さ規定 (カスタム3->4)
+  SelectorDepth:
+    enabled: true
+    max_depth: 4
+  # セレクタの命名規則 (カスタム)
+  SelectorFormat:
+    enabled: true
+    convention: ^[a-zA-Z\-_0-9]+$
+  # ショートハンド
+  Shorthand:
+    enabled: true
+  # 1行1属性
+  SingleLinePerProperty:
+    enabled: true
+  # 1行1セレクタ
+  SingleLinePerSelector:
+    enabled: true
+  # カンマのあとにはスペース
+  SpaceAfterComma:
+    enabled: true
+  # プロパティのコロンうしろにはスペース
+  SpaceAfterPropertyColon:
+    enabled: true
+  # プロパティとコロンのあいだはスペースなし
+  SpaceAfterPropertyName:
+    enabled: true
+  # 変数も同様
+  SpaceAfterVariableName:
+    enabled: true
+  # 演算子周りもスペース
+  SpaceAroundOperator:
+    enabled: true
+  # ブレース前にはスペース
+  SpaceBeforeBrace:
+    enabled: true
+  # カッコの内側にはスペースなし
+  SpaceBetweenParens:
+    enabled: true
+  # 文字列はシングルクォート
+  StringQuotes:
+    enabled: true
+    style: single_quotes
+  # 末尾のセミコロン必須
+  TrailingSemicolon:
+    enabled: true
+  # 末尾のスペースは削除
+  TrailingWhitespace:
+    enabled: true
+  # 不要なゼロを削除
+  TrailingZero:
+    enabled: false
+  # transition の値は必ずすべて渡す
+  TransitionAll:
+    enabled: false
+  # 不要な小数ははずす
+  UnnecessaryMantissa:
+    enabled: true
+  # 不要な&を削除
+  UnnecessaryParentReference:
+    enabled: true
+  # URLフォーマットにはスキーマなしの相対パス
+  UrlFormat:
+    enabled: true
+  # URLにはクォーテーション
+  UrlQuotes:
+    enabled: true
+  # 属性指定時には必ず変数を利用
+  VariableForProperty:
+    enabled: false
+  # ベンダープレフィックスをさける(mixinを利用)
+  VendorPrefix:
+    enabled: true
+  # 0には単位をつけない
+  ZeroUnit:
+    enabled: true
+  AtRuleNoUnknown:
+    enabled: true
+    ignoreAtRules:
+      - 'value'

@@ -1,0 +1,8 @@
+.red {
+  color: #ff0000;
+  user-select: none;
+
+  &:hover {
+    background-color: cyan;
+  }
+}
